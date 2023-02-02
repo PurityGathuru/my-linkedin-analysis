@@ -27,27 +27,27 @@ options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRat
 
 
 # Import App data from csv sheets **************************************
-df_cnt = pd.read_csv("https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/Connections.csv")
+df_cnt = pd.read_csv("https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/Connections.csv")
 df_cnt["Connected On"] = pd.to_datetime(df_cnt["Connected On"])
 df_cnt["month"] = df_cnt["Connected On"].dt.month
 df_cnt['month'] = df_cnt['month'].apply(lambda x: calendar.month_abbr[x])
 
 
-df_job = pd.read_csv("https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/jobs_applied.csv")
+df_job = pd.read_csv("https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/jobs_applied.csv")
 df_job["Application Date"] = pd.to_datetime(df_job["Application Date"])
 df_job["month"] = df_job["Application Date"].dt.month
 df_job['month'] = df_job['month'].apply(lambda x: calendar.month_abbr[x])
 
 
-df_invite = pd.read_csv("https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/Invitations.csv")
+df_invite = pd.read_csv("https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/Invitations.csv")
 df_invite["Sent At"] = pd.to_datetime(df_invite["Sent At"])
 
 
-df_react = pd.read_csv("https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/Reactions.csv")
+df_react = pd.read_csv("https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/Reactions.csv")
 df_react["Date"] = pd.to_datetime(df_react["Date"])
 
 
-df_msg = pd.read_csv("https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/messages.csv")
+df_msg = pd.read_csv("https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/messages.csv")
 df_msg["DATE"] = pd.to_datetime(df_msg["DATE"])
 
 
@@ -62,7 +62,7 @@ app.layout = dbc.Container([
     dbc.Row([
         dbc.Col([
             dbc.Card([
-                dbc.CardImg(src='https://raw.githubusercontent.com/roystrath/linkedin_dash_plotly/main/assets/linkedin-logo2.png') # 150px by 45px
+                dbc.CardImg(src='https://raw.githubusercontent.com/PurityGathuru/linkedin_dash_plotly/main/assets/linkedin-logo2.png') # 150px by 45px
             ],className='mb-2'),
             dbc.Card([
                 dbc.CardBody([
@@ -355,5 +355,5 @@ def update_pie(start_date, end_date):
 
 
 if __name__=='__main__':
-    app.run_server(debug=False, port=8008)
+    app.run_server(debug=False)
 
