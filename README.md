@@ -1,1 +1,1 @@
-"# my-linkedin-analysis" 
+This project is a social media analysis tool for professionals looking to be intentional about their career networks. Using LinkedIn data, it helps visualize and analyze one's career connection metrics including job types, connections per institution, etc. It's a great way to track and manage your career connections as a young  professional.
