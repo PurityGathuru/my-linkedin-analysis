@@ -95,6 +95,7 @@ app.layout = dbc.Container([
                 dbc.CardBody([
                     html.H6('About this Tool'),
                     html.P("This project is a social media analysis tool for professionals looking to be intentional about their career networks. Using LinkedIn data, it helps visualize and analyze your career connection metrics including job types, connections per institution, etc. It is a great way to track and manage your career connections as a young professional.", id='content-about')
+                    html.P("Link to the GitHub: https://github.com/PurityGathuru/my-linkedin-analysis", id='content-about')
                 ])
             ]),
         ], width=12),
